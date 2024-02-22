@@ -1,0 +1,19 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    return render(request, "hello/index.html")
+
+def ferdous(request):
+    return HttpResponse("Hello! Fdawg!")
+
+
+def sayings(request, name):
+    return render(request, "hello/sayings.html", {
+        "name": name.capitalize()
+    })
+
+
+def htmlStuff(request):
+    return render(request, "hello/index.html")
