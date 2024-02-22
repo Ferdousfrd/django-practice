@@ -1,0 +1,12 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    <h1>Tasks For Today!</h1>
+    <ol>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ol>
+
+    <a href="{% url 'tasks:add' %}">Add a new task?</a>
+{% endblock %}
