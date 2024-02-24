@@ -5,8 +5,12 @@
     <ol>
         {% for task in tasks %}
             <li>{{ task }}</li>
+            {% empty %}    
+            No tasks!
         {% endfor %}
     </ol>
 
     <a href="{% url 'tasks:add' %}">Add a new task?</a>
+    <a href="{% url 'tasks:weekendTasks' %}"> Weekend Tasks</a>
+    <a href="{% url 'tasks:special' %}">Special Tasks?</a>
 {% endblock %}
